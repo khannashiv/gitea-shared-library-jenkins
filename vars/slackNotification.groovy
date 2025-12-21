@@ -1,5 +1,5 @@
-def slack_notification() { 
-		
+def call() { 
+		// Change from 'slack_notification' to 'call'
 		def buildResult = currentBuild.currentResult
 		def buildUrl = env.BUILD_URL ?: 'URL not available'
 		
