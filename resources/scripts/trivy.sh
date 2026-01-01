@@ -7,7 +7,7 @@ echo "3rd positional argument docker image name: $3"
 
 # Generate timestamp for unique filename
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-OUTPUT_FILE="trivy-image-${TIMESTAMP}.json"
+OUTPUT_FILE=${4:-"trivy-image-$TIMESTAMP.json"}
 
 trivy image \
     --severity "$1" \
